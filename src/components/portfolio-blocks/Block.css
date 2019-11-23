@@ -1,0 +1,11 @@
+.block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 5em;
+    width: 5em;
+    border-radius: 100%;
+    background-color: cornflowerblue;
+}
+
