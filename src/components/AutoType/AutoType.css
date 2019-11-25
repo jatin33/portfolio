@@ -2,3 +2,11 @@
     height: 1em;
     color:whitesmoke;
 }
+
+.hide{
+    color:#757575;
+}
+
+.show{
+    color:whitesmoke;
+}

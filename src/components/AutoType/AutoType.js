@@ -6,25 +6,27 @@ class AutoType extends Component{
         super(props);
         this.state = {
             textCharacters : '',
-            currentCharacterIndex:0
+            currentCharacterIndex:0,
+            isEditing:false
         };
         this.intervalId = 0;
     }
 
     componentDidMount(){
-        this.intervalId = setInterval(this.handleTyping,400);
+        this.intervalId = setInterval(this.handleTyping,200);
     }
 
     handleTyping = () => {
-        let {textCharacters,currentCharacterIndex} = this.state;
+        let {textCharacters,currentCharacterIndex,isEditing} = this.state;
         const {text} = this.props;
         textCharacters = text.substring(0,currentCharacterIndex+1);
         currentCharacterIndex+=1;
+        isEditing = !isEditing;
         if(currentCharacterIndex > text.length){
             textCharacters = '';
             currentCharacterIndex = 0;
         }
-        this.setState({textCharacters,currentCharacterIndex});
+        this.setState({textCharacters,currentCharacterIndex,isEditing});
     }
 
     componentWillUnmount(){
@@ -33,7 +35,8 @@ class AutoType extends Component{
 
     render(){
         return(
-            <h2 className='text'>{this.state.textCharacters}</h2>
+            <h2 className='text'>{this.state.textCharacters}
+            <span className={this.state.isEditing?'hide':'show'}>|</span></h2>
         );
     }
 }
