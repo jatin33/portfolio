@@ -1,12 +1,13 @@
 .navigation{
     position: absolute;
+    margin-top: 2em;
     top: -1em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 15em;
-    height: 15em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15em;
+    width: 25em;
+    height: 25em;
     z-index: 1;
 }
 
@@ -26,7 +27,10 @@
      position: relative;
      color:whitesmoke;
      z-index: 9;
-     border-radius: 100%;
+}
+
+.description{
+margin-top: 10em;
 }
 
 img{

@@ -1,0 +1,10 @@
+a{
+    display: inline-block;
+    margin: 1em;
+    text-decoration: none;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+}

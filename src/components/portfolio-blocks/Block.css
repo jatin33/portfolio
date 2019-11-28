@@ -1,11 +1,21 @@
 .block{
     display: flex;
     justify-content: center;
+    margin: auto;
     align-items: center;
     border: 1px solid black;
     height: 5em;
     width: 5em;
     border-radius: 100%;
     background-color: cornflowerblue;
+    animation: pulse 1s infinite;
 }
 
+@keyframes pulse{
+    0% {
+        box-shadow: 0 0 0 0px rgba(236, 228, 228, 0.1);
+      }
+      100% {
+        box-shadow: 0 0 0 70px rgba(184, 165, 165, 0);
+      }
+}
