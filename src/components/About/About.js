@@ -8,19 +8,23 @@ import AutoType from '../AutoType/AutoType';
 function About(){
     return(
         <div className="container">
-            <div className="profileCard">
+            <div className="leftNav">
+            <Block  type={'Projects'}/>
+            <Block  type={'Skills'}/>
+            </div>
+            <div className="profile">
             <img alt="developer" src={photo}/>
             <div className="description">
-                <AutoType text={'Jatin Panjwani , Full Stack Developer'}/>
+            <AutoType text={'Jatin Panjwani , Full Stack Developer'}/>
             </div>
-            </div>
-            <div className="navigation">
-                <Block  type={'Skills'}/>
-                <Block  type={'Projects'}/>
-                <Block  type={'About'}/>
-                <Block  type={'Contact'}/>
-            </div>
+            <div className="footer">
             <SocialMedia/>
+            </div>
+            </div>
+            <div className="rightNav">
+            <Block  type={'Contact'}/>
+            <Block  type={'Work'}/>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,15 @@
+.skill-block{
+    background-color: blanchedalmond;
+    padding: 2em;
+    margin:2em;
+    border-radius: 30%;
+    font-size: 2rem;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+}

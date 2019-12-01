@@ -1,38 +1,48 @@
-.navigation{
-    position: absolute;
-    margin-top: 2em;
-    top: -1em;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 15em;
-    width: 25em;
-    height: 25em;
-    z-index: 1;
-}
-
 .container{
-    position: relative;
-    padding: 2em;
-    margin: 1em;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #757575;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-areas: "left middle right"
+   "ft ft ft";
+   column-gap: 0;
 }
 
-.profileCard{
-     position: relative;
-     color:whitesmoke;
-     z-index: 9;
+.leftNav{
+grid-area: left;
+display:flex;
+flex-direction: column;
+}
+
+.rightNav{
+grid-area: right;
+display:flex;
+flex-direction: column;
+}
+
+.profile{
+grid-area: middle;
+margin-top: 1em;
+}
+
+.footer{
+grid-area: ft;
+margin-top: 5em;
 }
 
 .description{
-margin-top: 10em;
+     color:whitesmoke;
+     width: 14em;
 }
 
 img{
-    opacity: 1;
+   border-radius: 50%;
+   height: 180px;
+   width:180px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+   .container{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+   }
 }
