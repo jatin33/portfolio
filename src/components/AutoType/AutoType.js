@@ -1,5 +1,21 @@
 import React,{Component} from 'react';
-import '../AutoType/AutoType.css';
+import styled from 'styled-components';
+
+const hide = 'hide';
+const show = 'show';
+
+const AutoTypeText = styled.div`
+    & .${hide}{
+        color:#757575;
+        }
+    & .${show}{
+        color:whitesmoke;
+        height:1em;
+    }
+`;
+
+AutoTypeText.hide = hide;
+AutoTypeText.show = show;
 
 class AutoType extends Component{
     constructor(props){
@@ -35,8 +51,8 @@ class AutoType extends Component{
 
     render(){
         return(
-            <h2 className='text'>{this.state.textCharacters}
-            <span className={this.state.isEditing?'hide':'show'}>|</span></h2>
+            <h2 className={AutoTypeText.show}>{this.state.textCharacters}
+            <span className={this.state.isEditing?AutoTypeText.show:AutoTypeText.hide}>|</span></h2>
         );
     }
 }
