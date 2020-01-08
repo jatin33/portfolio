@@ -42,8 +42,8 @@ const StyledLink = styled(Link)`
 
 function About(){
     return(
-        <FlexColumn>
-       <FlexRow>
+      <FlexColumn>
+        <FlexRow>
             <FlexColumn>
                 <StyledLink to='/work'>Work</StyledLink>
                 <StyledLink to='/skills'>Skills</StyledLink>
@@ -55,12 +55,12 @@ function About(){
                 <StyledLink to='/'>About</StyledLink>
                 <StyledLink to='/projects'>Projects</StyledLink>
             </FlexColumn>
-        </FlexRow>
-        <SocialMediaRow>
+         </FlexRow>
+         <SocialMediaRow>
             <SocialMedia/>
-        </SocialMediaRow>
-                </FlexColumn>
+         </SocialMediaRow>
+       </FlexColumn>
     )
 }
 
-export default About;
+export {About,StyledLink,FlexRow,FlexColumn};

@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import About from './components/About/About';
+import {About} from './components/About/About';
 import Particles from 'react-particles-js';
 import { Switch, Route } from 'react-router-dom';
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import Skills from './components/Skills/Skills';
 import Work from './components/Work/Work';
 import Project from './components/Projects/Projects';
@@ -68,6 +69,25 @@ function App() {
 		   <Route path='/work' component={Work}/>
            <Route path='/skills' component={Skills}/>
 	    </Switch>
+	{/* <Route render={({ location }) => {
+      const { key } = location;
+      return (
+        <SwitchTransition>
+          <CSSTransition
+            key={key}
+            timeout={{ enter: 300, exit: 300 }}
+            classNames="page"
+          >
+            <Switch location={location}>
+              <Route exact path="/" component={About} />
+              <Route path="/work" component={Work} />
+              <Route path="/projects" component={Project} />
+			  <Route path="/skills" component={Skills}/>
+            </Switch>
+          </CSSTransition>
+        </SwitchTransition>
+      )
+    }} /> */}
       <Particles params={options}/>
     </div>
   );

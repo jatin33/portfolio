@@ -5,34 +5,42 @@ function ProjectCard(props){
 return (
     <div className="container-project-card">
         <div className="projectImage">
-            <img alt="project"/>
-            <a href="#">Demo</a>
+            <a href={props.repo}>Code</a>
         </div>
         <div className="projectDescription">
             <div className="techStack">
                 <p>
                     <strong>
-                    Tech Stack
+                    {props.techStack}
                     </strong>
                 </p>
-                <div className="techIcons">af</div>
+                <div className="techIcons">{props.techIcons}</div>
             </div>
             <div className="description-projectStack">
                 <p>
                     <strong>
-                    Description
+                    {props.description}
                     </strong>
                 </p>
                 <div>
                     <ul>
-                        <li>How problem solved?</li>
-                        <li>What it does?</li>
+                        <li>{props.problem}</li>
+                        <li>{props.solution}</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 );
+}
+
+ProjectCard.defaultProps = {
+    repo:"#",
+    techStack:[""],
+    techIcons:[],
+    description:"",
+    problem:"",
+    solution:""
 }
 
 export default ProjectCard;

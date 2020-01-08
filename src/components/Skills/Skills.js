@@ -1,30 +1,32 @@
 import React from 'react';
 import {FaReact,FaNode,FaHtml5,FaCss3} from 'react-icons/fa';
-import {DiPostgresql,DiJsBadge} from 'react-icons/di';
-import './Skills.css';
+import {DiPostgresql,DiJsBadge,DiHeroku,DiJava,DiGit} from 'react-icons/di';
+import {FlexRow,FlexColumn,StyledLink} from '../About/About';
 
 function Skills(){
 return (
-    <div className='container'>
-        <div className='skill-block'>
-            <FaReact size={56}/>
-        </div>
-        <div className='skill-block'>
-            <FaNode size={56}/>
-        </div>
-        <div className='skill-block'>
-            <FaHtml5 size={56}/>
-        </div>
-        <div className='skill-block'>
-            <FaCss3 size={56}/>
-        </div>
-        <div className='skill-block'>
-            <DiJsBadge/>
-        </div>
-        <div className='skill-block'>
-            <DiPostgresql/>
-        </div>
-    </div>
+       <FlexColumn>
+           <FlexRow>
+               <StyledLink to='/work'>Work</StyledLink>
+               <StyledLink to='/'>About</StyledLink>
+               <StyledLink to='/projects'>Projects</StyledLink>
+            </FlexRow>
+            <FlexRow>
+                  <FaReact size={56}/>
+                  <FaNode size={70}/>
+                 <DiJava fontSize="5em"/>
+            </FlexRow>
+            <FlexRow>
+                  <DiJsBadge fontSize="4em"/>
+                  <FaCss3 size={56}/>
+                  <FaHtml5 size={56}/>
+            </FlexRow>
+             <FlexRow>
+                 <DiPostgresql fontSize="5em"/>
+                 <DiGit fontSize="5em"/>
+                 <DiHeroku fontSize="4em"/>
+             </FlexRow>
+       </FlexColumn>
 );
 }
 

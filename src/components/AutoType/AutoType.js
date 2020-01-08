@@ -29,7 +29,7 @@ class AutoType extends Component{
     }
 
     componentDidMount(){
-        this.intervalId = setInterval(this.handleTyping,200);
+        this.intervalId = setInterval(this.handleTyping,100);
     }
 
     handleTyping = () => {

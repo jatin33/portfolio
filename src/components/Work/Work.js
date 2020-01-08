@@ -2,11 +2,12 @@ import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import {data} from './data';
+import {FlexRow,FlexColumn,StyledLink} from '../About/About';
 
 function Work(){
-    const timeline = data.map((workExperience)=>{
+    const experiences = data.map((workExperience,index)=>{
         return(
-        <VerticalTimelineElement data={workExperience.date} 
+        <VerticalTimelineElement key={index} data={workExperience.date} 
         position={workExperience.positionOnTimeline}>
             <h3>{workExperience.title}</h3>
             <h4>{workExperience.company}</h4>
@@ -15,11 +16,16 @@ function Work(){
         )
     });
 return(
-<div>
-    <VerticalTimeline animate={true}>
-        {timeline}
-    </VerticalTimeline>
-</div>
+    <FlexColumn>
+      <VerticalTimeline animate={true}>
+        {experiences}
+      </VerticalTimeline>
+      <FlexRow>
+         <StyledLink to='/skills'>Skills</StyledLink>
+         <StyledLink to='/'>About</StyledLink>
+         <StyledLink to='/projects'>Projects</StyledLink>
+      </FlexRow>
+    </FlexColumn>
 );
 }
 
