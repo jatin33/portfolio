@@ -11,9 +11,13 @@ const Container = styled.div`
     margin-left: 0.5em;
     margin-bottom: 2em;
     padding: 0.5em;
-    width:15em;
+    max-width:20em;
     border-radius: 20%;
     box-shadow: 0px 0px 3px 5px #f2e1f2;
+`;
+
+const StyledLi = styled.li`
+margin: 0.5em;
 `;
 
 const ProjectCard = (props)=>{
@@ -21,7 +25,7 @@ const ProjectCard = (props)=>{
         <Container>
             <h3>{props.type}</h3>
             <ul>
-    {props.details.map((detail)=><li>{detail.description}(<FancyLink href={detail.url}>Link</FancyLink>)</li>)}
+    {props.details.map((detail)=><StyledLi>{detail.description}(<FancyLink href={detail.url}>Link</FancyLink>)</StyledLi>)}
             </ul>
         </Container>
     )

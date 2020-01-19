@@ -7,6 +7,14 @@ export const data = {
         {
             "description":"Enhanced createSelect functionality in p5.js library",
             "url":"https://github.com/processing/p5.js/pull/4224"
+        },
+        {
+            "description":"Adds third argument to position method",
+            "url":"https://github.com/processing/p5.js/pull/4259"
+        },
+        {
+            "description":"Add tests for DOM methods",
+            "url":"https://github.com/processing/p5.js/pull/4256"
         }
     ],
     "Documentation":[
