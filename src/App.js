@@ -3,7 +3,6 @@ import './App.css';
 import {About} from './components/About/About';
 import Particles from 'react-particles-js';
 import { Switch, Route } from 'react-router-dom';
-import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import Skills from './components/Skills/Skills';
 import Work from './components/Work/Work';
 import Project from './components/Projects/Projects';

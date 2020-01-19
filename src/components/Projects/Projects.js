@@ -1,29 +1,42 @@
 import React from 'react';
-import ProjectCard from '../Projects/ProjectCard/ProjectCard';
+import ProjectCard from './ProjectCard';
 import {FlexRow,FlexColumn,StyledLink} from '../About/About';
 import styled from 'styled-components';
+import {data} from './data';
 
 const ProjectRow = styled(FlexRow)`
 margin:0;
-@media (min-width: 300px) and (max-width:700px){
-    flex-direction:column;
-}
+flex-wrap:wrap;
 `;
 
 const ProjectColumn = styled(FlexColumn)`
-height:95vh;
+height:90vh;
 `;
-function Projects(){
-return (
+
+const NavRow = styled(FlexRow)`
+height: 10vh;
+`;
+
+function Projects(){    
+    let projects = [];
+    for(let [key,value] of Object.entries(data)){
+        let prData = [...value];
+        projects.push(<ProjectCard type={key} details={prData}/>);
+    }
+    return (
     <ProjectColumn>
-        <FlexRow>
+        <NavRow>
        <StyledLink to='/work'>Work</StyledLink>
        <StyledLink to='/'>About</StyledLink>
        <StyledLink to='/skills'>Skills</StyledLink>
-        </FlexRow>
+        </NavRow>
     <ProjectRow>
-        <ProjectCard/>
-        <ProjectCard/>
+        {projects[0]}
+        {projects[1]}
+    </ProjectRow>
+    <ProjectRow>
+        {projects[2]}
+        {projects[3]}
     </ProjectRow>
     </ProjectColumn>
 );
