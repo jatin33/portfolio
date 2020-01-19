@@ -7,9 +7,9 @@ function Skills(){
 return (
        <FlexColumn>
            <FlexRow>
-               <StyledLink to='/work'>Work</StyledLink>
+               <StyledLink to='/experiences'>Experiences</StyledLink>
                <StyledLink to='/'>About</StyledLink>
-               <StyledLink to='/projects'>Projects</StyledLink>
+               <StyledLink to='/opensource'>Open Source</StyledLink>
             </FlexRow>
             <FlexRow>
                   <FaReact size={56}/>

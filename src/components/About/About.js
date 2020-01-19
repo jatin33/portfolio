@@ -45,7 +45,7 @@ function About(){
       <FlexColumn>
         <FlexRow>
             <FlexColumn>
-                <StyledLink to='/work'>Work</StyledLink>
+                <StyledLink to='/experiences'>Experiences</StyledLink>
                 <StyledLink to='/skills'>Skills</StyledLink>
             </FlexColumn>
             <NameColumn>
@@ -53,7 +53,7 @@ function About(){
             </NameColumn>
             <FlexColumn>
                 <StyledLink to='/'>About</StyledLink>
-                <StyledLink to='/projects'>Projects</StyledLink>
+                <StyledLink to='/opensource'>Open Source</StyledLink>
             </FlexColumn>
          </FlexRow>
          <SocialMediaRow>

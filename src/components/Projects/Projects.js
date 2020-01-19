@@ -26,7 +26,7 @@ function Projects(){
     return (
     <ProjectColumn>
         <NavRow>
-       <StyledLink to='/work'>Work</StyledLink>
+       <StyledLink to='/experiences'>Experiences</StyledLink>
        <StyledLink to='/'>About</StyledLink>
        <StyledLink to='/skills'>Skills</StyledLink>
         </NavRow>
@@ -41,5 +41,4 @@ function Projects(){
     </ProjectColumn>
 );
 }
-
 export default Projects;

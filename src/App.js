@@ -64,8 +64,8 @@ function App() {
     <div className="App">
 	   <Switch>
 		   <Route path='/' exact component={About}/>
-		   <Route path='/projects' component={Project}/>
-		   <Route path='/work' component={Work}/>
+		   <Route path='/opensource' component={Project}/>
+		   <Route path='/experiences' component={Work}/>
            <Route path='/skills' component={Skills}/>
 	    </Switch>
 	{/* <Route render={({ location }) => {

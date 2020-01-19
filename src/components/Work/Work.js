@@ -23,7 +23,7 @@ return(
       <FlexRow>
          <StyledLink to='/skills'>Skills</StyledLink>
          <StyledLink to='/'>About</StyledLink>
-         <StyledLink to='/projects'>Projects</StyledLink>
+         <StyledLink to='/opensource'>Open Source</StyledLink>
       </FlexRow>
     </FlexColumn>
 );
