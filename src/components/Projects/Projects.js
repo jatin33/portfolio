@@ -25,19 +25,17 @@ function Projects(){
     }
     return (
     <ProjectColumn>
-        <NavRow>
+    <ProjectRow>
+        {projects}
+    </ProjectRow>
+    <FlexRow>
+        {Array(200).fill('-')}
+    </FlexRow>
+    <NavRow>
        <StyledLink to='/experiences'>Experiences</StyledLink>
        <StyledLink to='/'>About</StyledLink>
        <StyledLink to='/skills'>Skills</StyledLink>
-        </NavRow>
-    <ProjectRow>
-        {projects[0]}
-        {projects[1]}
-    </ProjectRow>
-    <ProjectRow>
-        {projects[2]}
-        {projects[3]}
-    </ProjectRow>
+    </NavRow>
     </ProjectColumn>
 );
 }

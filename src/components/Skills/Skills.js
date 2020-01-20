@@ -6,11 +6,6 @@ import {FlexRow,FlexColumn,StyledLink} from '../About/About';
 function Skills(){
 return (
        <FlexColumn>
-           <FlexRow>
-               <StyledLink to='/experiences'>Experiences</StyledLink>
-               <StyledLink to='/'>About</StyledLink>
-               <StyledLink to='/opensource'>Open Source</StyledLink>
-            </FlexRow>
             <FlexRow>
                   <FaReact size={56}/>
                   <FaNode size={70}/>
@@ -26,6 +21,14 @@ return (
                  <DiGit fontSize="5em"/>
                  <DiHeroku fontSize="4em"/>
              </FlexRow>
+             <FlexRow>
+                {Array(200).fill('-')}
+            </FlexRow>
+            <FlexRow>
+               <StyledLink to='/experiences'>Experiences</StyledLink>
+               <StyledLink to='/'>About</StyledLink>
+               <StyledLink to='/opensource'>Open Source</StyledLink>
+            </FlexRow>
        </FlexColumn>
 );
 }

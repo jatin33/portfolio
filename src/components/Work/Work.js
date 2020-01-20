@@ -3,6 +3,13 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import {data} from './data';
 import {FlexRow,FlexColumn,StyledLink} from '../About/About';
+import styled from 'styled-components';
+
+const NavCol = styled.div`
+display : flex;
+flex-direction:column;
+color: white;
+`;
 
 function Work(){
     const experiences = data.map((workExperience,index)=>{
@@ -20,11 +27,14 @@ return(
       <VerticalTimeline animate={true}>
         {experiences}
       </VerticalTimeline>
-      <FlexRow>
+      <NavCol>
+         {Array(200).fill('-')}
+         <FlexRow>
          <StyledLink to='/skills'>Skills</StyledLink>
          <StyledLink to='/'>About</StyledLink>
          <StyledLink to='/opensource'>Open Source</StyledLink>
-      </FlexRow>
+         </FlexRow>
+      </NavCol>
     </FlexColumn>
 );
 }
