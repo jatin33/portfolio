@@ -1,21 +1,12 @@
 import React,{Component} from 'react';
-import styled from 'styled-components';
 
-const hide = 'hide';
-const show = 'show';
+const hide = {
+    color:'#000906'
+};
 
-const AutoTypeText = styled.div`
-    & .${hide}{
-        color:#757575;
-        }
-    & .${show}{
-        color:whitesmoke;
-        height:1em;
-    }
-`;
-
-AutoTypeText.hide = hide;
-AutoTypeText.show = show;
+const show = {
+    color:'whitesmoke'
+}
 
 class AutoType extends Component{
     constructor(props){
@@ -33,14 +24,14 @@ class AutoType extends Component{
     }
 
     handleTyping = () => {
-        let {textCharacters,currentCharacterIndex,isEditing} = this.state;
-        const {text} = this.props;
+        let {textCharacters, currentCharacterIndex, isEditing} = this.state;
+        const { text } = this.props;
         textCharacters = text.substring(0,currentCharacterIndex+1);
-        currentCharacterIndex+=1;
+        currentCharacterIndex += 1;
         isEditing = !isEditing;
-        if(currentCharacterIndex > text.length){
-            textCharacters = '';
-            currentCharacterIndex = 0;
+        if(currentCharacterIndex === text.length){
+            isEditing = false;
+            clearInterval(this.intervalId);
         }
         this.setState({textCharacters,currentCharacterIndex,isEditing});
     }
@@ -51,8 +42,8 @@ class AutoType extends Component{
 
     render(){
         return(
-            <h2 className={AutoTypeText.show}>{this.state.textCharacters}
-            <span className={this.state.isEditing?AutoTypeText.show:AutoTypeText.hide}>|</span></h2>
+            <h2 style = {show}>{this.state.textCharacters}
+            <span style = {this.state.isEditing ? show : hide}>|</span></h2>
         );
     }
 }
