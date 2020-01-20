@@ -9,7 +9,7 @@ display:flex;
 flex-direction:row;
 justify-content: space-evenly;
 color : white;
-margin:0.5em;
+margin:0.2em;
 padding:0.5em;
 `;
 
@@ -40,6 +40,11 @@ const StyledLink = styled(Link)`
     z-index:99;
 `;
 
+const StyledPara = styled.p`
+ font-weight: bold;
+ font-style: italic;
+`;
+
 function About(){
     return(
       <FlexColumn>
@@ -55,6 +60,12 @@ function About(){
                 <StyledLink to='/'>About</StyledLink>
                 <StyledLink to='/opensource'>Open Source</StyledLink>
             </FlexColumn>
+         </FlexRow>
+         <FlexRow>
+             <StyledPara>
+                 I'm passionate Full Stack Developer who believes in building beautiful UI with robust, scalable backends.
+                 I have realized the power of giving back to community, hence started contributing to Open Source.
+             </StyledPara>
          </FlexRow>
          <SocialMediaRow>
             <SocialMedia/>
