@@ -38,7 +38,7 @@ const StyledLink = styled(Link)`
     position : relative;
     z-index:9;
 
-    &:hover{
+    &:hover {
      text-decoration: none;   
     }
 
@@ -55,7 +55,7 @@ const StyledLink = styled(Link)`
 
     &:hover:after {
         right: 0;
-      }
+    }
 `;
 
 const StyledPara = styled.p`
@@ -84,7 +84,6 @@ function About(){
          <FlexRow>
                 <StyledLink to='/experiences'>Experiences</StyledLink>
                 <StyledLink to='/skills'>Skills</StyledLink>
-                <StyledLink to='/'>About</StyledLink>
                 <StyledLink to='/opensource'>Open Source</StyledLink>
          </FlexRow>
          <FlexRow>
