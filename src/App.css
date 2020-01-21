@@ -1,8 +1,13 @@
 .App {
   text-align: center;
   background-color: #000906;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
+}
+
+.selected-link{
+    position:relative;
+    text-decoration: underline blanchedalmond !important;
 }
 
 .page-enter {

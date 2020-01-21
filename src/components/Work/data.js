@@ -4,7 +4,8 @@ export const data = [
         summary:'Worked on Frontend of Leading Healthcare Organisation based in US.',
         company:'Tata Consultancy Services Pvt Ltd',
         date:'Sept 2018- Sept 2019',
-        positionOnTimeline:'left'
+        positionOnTimeline:'left',
+        techStack: 'React, Java, JavaScript, Contentful, Microsoft SharePoint'
     },
     {
         title:'Intern Java Developer',
@@ -12,5 +13,6 @@ export const data = [
         company:'Tata Consultancy Services Pvt Ltd',
         date:'May 2017 - Aug 2017',
         positionOnTimeline:'right',
+        techStack: 'Java, SpringMVC, PostgreSql, Git, MaterializeCSS'
     }
 ];

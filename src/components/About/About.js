@@ -2,8 +2,9 @@ import React from 'react';
 import SocialMedia from '../SocialMedia/SocialMedia';
 import AutoType from '../AutoType/AutoType';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { MdFileDownload } from 'react-icons/md';
+import '../../App.css';
 
 const FlexRow = styled.div`
 display:flex;
@@ -22,7 +23,7 @@ padding-top:1em;
 padding-left:0.5em;
 flex-direction:column;
 justify-content:space-evenly;
-height: 95vh;
+height: 105vh;
 `;
 
 const SocialMediaRow = styled(FlexRow)`
@@ -30,7 +31,7 @@ justify-content:flex-end;
 `;
 
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
     font-weight:bold;
     color: rgba(76,187,23);
     text-decoration:none;
@@ -82,9 +83,10 @@ function About(){
     return(
       <FlexColumn>
          <FlexRow>
-                <StyledLink to='/experiences'>Experiences</StyledLink>
-                <StyledLink to='/skills'>Skills</StyledLink>
-                <StyledLink to='/opensource'>Open Source</StyledLink>
+                <StyledLink to='/' activeClassName={'selected-link'}>About</StyledLink>
+                <StyledLink to='/experiences' activeClassName={'selected-link'}>Experiences</StyledLink>
+                <StyledLink to='/skills' activeClassName={'selected-link'}>Skills</StyledLink>
+                <StyledLink to='/opensource' activeClassName={'selected-link'}>Open Source</StyledLink>
          </FlexRow>
          <FlexRow>
                 <AutoType text={'Jatin Panjwani, Software Developer'}/>

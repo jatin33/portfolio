@@ -2,10 +2,42 @@ import React from 'react';
 import {FaReact,FaNode,FaHtml5,FaCss3} from 'react-icons/fa';
 import {DiPostgresql,DiJsBadge,DiHeroku,DiJava,DiGit} from 'react-icons/di';
 import {FlexRow,FlexColumn,StyledLink} from '../About/About';
+import styled from 'styled-components';
 
+const name = {
+    textDecoration: 'underline'
+    };
+    
+const NavRow = styled.div`
+   display:flex;
+   flex-direction:row;
+   align-items:center;
+   justify-content: space-around; 
+   flex:1.5;`;
+    
+const Header = styled(FlexRow)`
+  @media (max-width: 420px){
+    flex-direction: column;
+  }`;
+
+const SkillsColumn = styled(FlexColumn)`
+@media (max-width: 420px){
+    height: 80vh;
+  };
+`;  
+ 
 function Skills(){
 return (
-       <FlexColumn>
+       <SkillsColumn>
+          <Header>
+            <h2 style = {name}>Jatin Panjwani</h2>
+            <NavRow>
+               <StyledLink to='/' exact activeClassName={'selected-link'}>About</StyledLink>
+               <StyledLink to='/experiences' activeClassName={'selected-link'}>Experiences</StyledLink>
+               <StyledLink to='/skills' activeClassName={'selected-link'}>Skills</StyledLink>
+               <StyledLink to='/opensource' activeClassName={'selected-link'}>Open Source</StyledLink>
+            </NavRow>
+          </Header>
             <FlexRow>
                   <FaReact size={56}/>
                   <FaNode size={70}/>
@@ -21,15 +53,7 @@ return (
                  <DiGit fontSize="5em"/>
                  <DiHeroku fontSize="4em"/>
              </FlexRow>
-             <FlexRow>
-                {Array(200).fill('-')}
-            </FlexRow>
-            <FlexRow>
-               <StyledLink to='/experiences'>Experiences</StyledLink>
-               <StyledLink to='/'>About</StyledLink>
-               <StyledLink to='/opensource'>Open Source</StyledLink>
-            </FlexRow>
-       </FlexColumn>
+       </SkillsColumn>
 );
 }
 
