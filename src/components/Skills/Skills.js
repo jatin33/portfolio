@@ -12,17 +12,22 @@ const NavRow = styled.div`
    display:flex;
    flex-direction:row;
    align-items:center;
-   justify-content: space-around; 
-   flex:1.5;`;
+   justify-content: end; 
+   flex:1;`;
     
 const Header = styled(FlexRow)`
+  align-items: end;
+  padding:1em;
+  margin-bottom: 2em;
   @media (max-width: 420px){
+    align-items:center;
     flex-direction: column;
   }`;
 
 const SkillsColumn = styled(FlexColumn)`
+height: 60vh;
 @media (max-width: 420px){
-    height: 80vh;
+    height: 55vh;
   };
 `;  
  

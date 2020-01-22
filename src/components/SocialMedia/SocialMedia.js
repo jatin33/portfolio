@@ -5,11 +5,11 @@ import styled from 'styled-components';
 
 const IconLinks = styled.a`
     display: inline-block;
-    margin-left:0.5em;
-    margin-right:0.5em;
+    margin-left:1em;
+    margin-right:1em;
     text-decoration: none;
     color: rgba(76,187,23);
-    z-index:999;
+    z-index:9;
 `
 
 function SocialMedia() {

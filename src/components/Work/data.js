@@ -3,7 +3,7 @@ export const data = [
         title:'Software Developer',
         summary:'Worked on Frontend of Leading Healthcare Organisation based in US.',
         company:'Tata Consultancy Services Pvt Ltd',
-        date:'Sept 2018- Sept 2019',
+        date:'Sept 2018 - Sept 2019',
         positionOnTimeline:'left',
         techStack: 'React, Java, JavaScript, Contentful, Microsoft SharePoint'
     },

@@ -12,22 +12,20 @@ flex-direction:row;
 justify-content: space-evenly;
 color : white;
 margin-bottom:0.5em;
-max-height: 20em;
 padding:0.5em;
 `;
 
 const FlexColumn = styled.div`
 display:flex;
 flex:1;
-padding-top:1em;
 padding-left:0.5em;
 flex-direction:column;
 justify-content:space-evenly;
-height: 105vh;
+height: 95vh;
 `;
 
 const SocialMediaRow = styled(FlexRow)`
-justify-content:flex-end; 
+justify-content: flex-end;
 `;
 
 
@@ -35,6 +33,7 @@ const StyledLink = styled(NavLink)`
     font-weight:bold;
     color: rgba(76,187,23);
     text-decoration:none;
+    margin: 0.5em;
     display:inline-block;
     position : relative;
     z-index:9;
@@ -62,8 +61,6 @@ const StyledLink = styled(NavLink)`
 const StyledPara = styled.p`
  text-align:left;
  line-height: 1.4em;
- font-weight: bold;
- font-style: italic;
  max-width: 35em;
 `;
 

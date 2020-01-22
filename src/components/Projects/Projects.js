@@ -16,19 +16,23 @@ const NavRow = styled.div`
    display:flex;
    flex-direction:row;
    align-items:center;
-   justify-content: space-around; 
-   flex:1.5;`;
+   justify-content: end; 
+   flex:1;`;
     
 const Header = styled(FlexRow)`
+  align-items: end;
+  margin-bottom: 3em;
   @media (max-width: 420px){
+    margin-bottom:1em;
+    align-items:center;
     flex-direction: column;
   }`;
 
 const ProjectsColumn = styled(FlexColumn)`
-height:80vh;
-@media (max-width: 420px){
-    height: 55vh;
-  };
+height:70vh;
+@media (max-width: 600px){
+  height:100vh;
+}
 `;
 
 function Projects(){    
