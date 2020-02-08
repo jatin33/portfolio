@@ -1,11 +1,11 @@
-import React from 'react';
+import React , { Suspense } from 'react';
 import './App.css';
 import {About} from './components/About/About';
 import Particles from 'react-particles-js';
 import { Switch, Route } from 'react-router-dom';
-import Skills from './components/Skills/Skills';
-import Work from './components/Work/Work';
-import Project from './components/Projects/Projects';
+const Skills = React.lazy(() => import('./components/Skills/Skills'));
+const Work = React.lazy(() => import('./components/Work/Work'));
+const Project = React.lazy(() => import('./components/Projects/Projects'));
 
 const options = {
 	    "particles": {
@@ -62,31 +62,18 @@ const options = {
 function App() {
   return (
     <div className="App">
-	   <Switch>
-		   <Route path='/' exact component={About}/>
-		   <Route path='/opensource' component={Project}/>
-		   <Route path='/experiences' component={Work}/>
-           <Route path='/skills' component={Skills}/>
-	    </Switch>
-	{/* <Route render={({ location }) => {
-      const { key } = location;
-      return (
-        <SwitchTransition>
-          <CSSTransition
-            key={key}
-            timeout={{ enter: 300, exit: 300 }}
-            classNames="page"
-          >
-            <Switch location={location}>
-              <Route exact path="/" component={About} />
-              <Route path="/work" component={Work} />
-              <Route path="/projects" component={Project} />
-			  <Route path="/skills" component={Skills}/>
-            </Switch>
-          </CSSTransition>
-        </SwitchTransition>
-      )
-    }} /> */}
+	   		<Route render={({location}) => {
+				return (
+				<Suspense fallback={<div style={{color:"white"}}>Loading...</div>}>
+					<Switch location={location}>
+						<Route path='/' exact component={About}/>
+						<Route path='/opensource' component={Project}/>
+						<Route path='/experiences' component={Work}/>
+						<Route path='/skills' component={Skills}/>
+					</Switch>
+				</Suspense>
+				)
+		}}/>
       <Particles params={options}/>
     </div>
   );
